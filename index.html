@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matkablogi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            background-color: rgb(254, 247, 233);
+        }
+
+        .navbar-toggler{
+            border-color: transparent;
+        }
+
+        .navbar-toggler-icon {
+            background-color: transparent;
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after,
+        .navbar-toggler-icon div {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #888; /* Change this color to the desired color */
+            position: absolute;
+            left: 0;
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon::before {
+            top: 8px;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: 8px;
+        }
+
+        .navbar-toggler-icon div {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            background-color: rgb(254, 247, 233);
+        }
+        .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            background-color: rgb(254, 247, 233);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="header">
+        <h1>Meidän matkablogi</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Etusivu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="second.html">Matkakohteet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="third.html">Omat kokemuksesi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fourth.html">Nähtävyydet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <h3>Onko sinulla hankaluuksia keksiä mihin haluaisit matkustaa?</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box">
+                    <img src="IMG/Kaupunki.jpg" alt="Kaupunkikuva">
+                    <h2>Aasian kohteet</h2>
+                    <p>Aasia on maapallon suurin maanosa niin väestöltään kuin pinta-alaltaankin. Aasiassa sijaitsee maailman korkein vuoristo Himalaja. Aasian alueen luonto on erittäin rikasta ja siellä elää paljon sellaisia eläimiä, joita ei muualla tavata.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box">
+                    <img src="IMG/Irlanti.jpg" alt="Irlannin katu">
+                    <h2>Euroopan kohteet</h2>
+                    <p>Eurooppa on maanosa pohjoisella pallonpuoliskolla. Sitä rajaavat Atlantin valtameri lännessä, Pohjoinen jäämeri pohjoisessa, Uralvuoret ja Uraljoki idässä, Kaspianmeri, Kaukasusvuoret ja Mustameri kaakossa sekä Välimeri etelässä.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box">
+                    <img src="IMG/Afrikka.webp" alt="Afrikan tasanko">
+                    <h2>Afrikan kohteet</h2>
+                    <p>Afrikka on maailman toiseksi suurin maanosa. Afrikka koostuu useista ylätasangoista. Mantereen suurin joki on Niili, laajin järvi Victorianjärvi ja korkein vuori Kilimanjaro.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box">
+                    <img src="IMG/Brasilia.jpg" alt="Brasilia">
+                    <h2>Pohjois- ja Etelä Amerikan kohteet</h2>
+                    <p>Etelä-Amerikka on maanosa läntisellä pallonpuoliskolla Tyynenmeren ja Atlantin välissä.
+                        Pohjois-Amerikka on pohjoisella pallonpuoliskolla sijaitseva maanosa Etelä-Amerikan pohjoispuolella, Tyynenmeren ja Atlantin valtameren välissä.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

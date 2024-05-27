@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matkablogi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            background-color: rgb(254, 247, 233);
+        }
+
+        .navbar-toggler {
+            border-color: transparent;
+        }
+
+        .navbar-toggler-icon {
+            background-color: transparent;
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after,
+        .navbar-toggler-icon div {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #888; /* Change this color to the desired color */
+            position: absolute;
+            left: 0;
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon::before {
+            top: 8px;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: 8px;
+        }
+
+        .navbar-toggler-icon div {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background-color: rgb(219, 188, 158);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            margin: 0 0 10px;
+        }
+        .card-content p {
+            margin: 0 0 15px;
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>Meidän matkablogi</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Etusivu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="second.html">Matkakohteet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="third.html">Omat kokemuksesi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fourth.html">Nähtävyydet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <h1>Nähtävyydet</h1>
+
+<div class="card-container">
+    <div class="card">
+        <img src="IMG/Temppeli.jpeg" alt="Sanctuary of Truth">
+        <div class="card-content">
+            <h3>Thaimaa</h3>
+            <p>Sanctuary of Truth</p>
+            <a href="#" class="button" onclick="openModal('thaimaa')">Lue lisää</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="IMG/NewYork.jpeg" alt="Times Square">
+        <div class="card-content">
+            <h3>Yhdysvallat</h3>
+            <p>Times Square New Yorkissa</p>
+            <a href="#" class="button" onclick="openModal('kiina')">Lue lisää</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="IMG/Pyramidit.jpg" alt="Gizan pyramidit">
+        <div class="card-content">
+            <h3>Egypti</h3>
+            <p>Gizan pyramidit</p>
+            <a href="#" class="button" onclick="openModal('rooma')">Lue lisää</a>
+        </div>
+    </div>
+</div>
+
+<div id="thaimaa" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('thaimaa')">&times;</span>
+        <h2>Thaimaa</h2>
+        <p>Thaimaassa on todella paljon nähtävää, mutta nyt haluaisin kertoa temppelistä nimeltä Sanctuary of Truth.
+            Sen on suunnitellut thaimaalainen bisnesmies Lek Viriyaphan. Vuodesta 1981 asti temppeli on ollut remontissa ja se valmistuu aikaisintaan vuonna 2025. Temppelissä voi kuitenkin vierailla.
+            Temppelistä tekee erikoisen se, että se on rakennettu kokonaan puusta. Siihen on käytetty useita eri puumateriaaleja kontrastin ja tekstuurin saamiseksi.
+        </p>
+    </div>
+</div>
+
+<div id="kiina" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('kiina')">&times;</span>
+        <h2>Yhdysvallat</h2>
+        <p>Times Square on Manhattanin suosituin vierailukohde ja se tunnetaan myös "maailman risteyskohtana". Siellä myös otetaan enemmän kuvia ja selfieitä kuin missään muualla New Yorkissa.
+            Times Squarelta löytyy myös monien suosittujen merkkien lippulaivamyymälät, ja ne kannattaa ehdottomasti käydä katsomassa myös.
+        </p>
+    </div>
+</div>
+
+<div id="rooma" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('rooma')">&times;</span>
+        <h2>Egypti</h2>
+        <p>Gizan pyramidit sijaitsevat Gizassa Kairon eteläpuolella Egyptissä. Pyramidit rakennettiin noin vuosien 2600–2500 eaa. aikana. 
+            Pyramidiryhmään kuuluvat faaraoiden Khufu, Khafre ja Menkaure hautamuistomerkit. Näistä Kheopsin pyramidi kuuluu maailman seitsemään ihmeeseen.
+            Turistien on mahdollista myös vierailla pyramidien sisällä, mutta yleensä vain yksi pyramidi kerrallaan on avoinna yleisölle.
+            Pyramidit ovat olleet Unescon maailmanperintöluetteloa vuodesta 1979 lähtien.</p>
+    </div>
+</div>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+</script>
+
+</body>
